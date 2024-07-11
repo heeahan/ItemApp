@@ -49,6 +49,22 @@ CONSTRAINT tutorials_PK PRIMARY KEY(id)
 
 <sup>tmi</sup> 기본 기능 구현 완성 후 GPT한테 추가할 기능 있는지 물어봤는데 (현재 시점에)의미 있는 부분이 딱히 없어서 function도, 컬럼도 그대로 유지했습니다.
 
+## 3. API 파트
+
+### 3.1 개발 환경
+
+1. 언어: JAVA 21
+2. 프레임워크: Spring Boot 3.3.1
+3. 프로젝트 빌드도구: Gradle - Groovy
+4. IDE: IntelliJ IDEA
+5. 데이터베이스: MySQL
+6. REST API Documentation 툴: Swagger UI
+
+### 3.2 실행 방법
+
+
+
+
 
 
 
