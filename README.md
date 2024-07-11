@@ -114,8 +114,6 @@ ItemApp 프로젝트는 Spring Boot와 Java를 사용한 인벤토리 관리 시
 
 # [ENG] ITEM-OPERATING Project feat. SpringBoot
 
-(Still working on this file...)
-
 **🤡This project is just for practice🤡**
 
 This project is a Java-based inventory management application built using the Spring Boot framework.
@@ -150,8 +148,72 @@ There are 4 columns.
 3. Description: Some more details about the item.
 4. Quantity: Obviously the quantity of the item.
 
+| id | Title | Description | Quantity |
+| --- | --- | --- | --- |
+| 1 | sample1 | this is sample 1 | 0 |
+| 2 | sample2 | yummy | 26 |
+
 <sup>tmi</sup> I asked GPT if there are mroe/better things to add after finishing the basic functions of the project, but most of the advice was meaningless(for me right now). So I did no change to the functions or columns.
 
+## 3. API Part
+
+### 3.1 Environment
+
+- Language: JAVA 21
+- Framework: Spring Boot 3.3.1
+- Project build tool: Gradle - Groovy
+- IDE: IntelliJ IDEA
+- Database: MySQL
+- REST API Documentation Tool: Swagger UI
+- OS: Windows
+
+### 3.2 How To Run
+
+*Clone the repository from web URL*
+```
+git clone https://github.com/Project_web_URL
+```
+
+*Go to the project dir*
+```
+cd ItemApp
+```
+
+*Build and Run the Project*
+
+- *Windows:*
+```
+gradlew.bat build
+gradlew.bat bootRun
+```
+
+* *Linux/MacOS:*
+```
+./gradlew build
+./gradlew bootRun
+```
+
+*Test on Swagger UI*
+```
+localhost:8080/swagger-ui/index.html
+```
+
+## 4. End of the Project☕
+
+1. It takes time to understand the various configuration options and dependency management in Spring Boot. (The legendary Annotations)
+2. It is advisable to manage environment settings through the ***application.properties*** file and use profiles to distinguish between development, test, and production environments.
+3. During the process of designing and implementing the RESTful API, careful consideration was needed for endpoint design and the use of HTTP methods.
+4. Exception handling!
+   - It is crucial to appropriately handle exceptions that may occur at all layers, especially managing exceptions that arise from interactions with the database.
+   - Implement global exception handling using Spring's @ControllerAdvice and @ExceptionHandler.
+
+## 5. The very last
+
+The ItemApp project is a good example of an inventory management system using Spring Boot and Java.
+
+(I received a lot of help from my mentor, sample code, Google searches, and ChatGPT.)
+
+Through this project, I have learned various technologies such as the basic structure of **Spring Boot and implementation of CRUD functionalities**, **database integration**, and **RESTful API design**. Based on the challenges and precautions encountered during the development process, I will be able to develop more robust and scalable applications. (maybe)
 
 # [中文] 物品管理项目 feat. SpringBoot
 
