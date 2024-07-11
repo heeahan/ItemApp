@@ -225,6 +225,103 @@ Through this project, I have learned various technologies such as the basic stru
 
 **🤡本项目仅用于练习🤡**
 
-## 1. 项目整体结构
+这个项目是一个基于Java的库存管理应用，使用了Spring Boot框架构建。
+它提供了管理物品的功能，包括创建、读取、更新和删除物品。[**基本的CRUD操作**]
 
-1. 用于接受请求
+## 1. 项目结构
+1. 控制器（Controllers）：处理HTTP请求（例如，ItemController.java）
+2. 领域模型（Domain）：定义实体/模型（例如，Item.java）
+3. 数据访问层（Repository）：处理数据访问（例如，ItemRepository.java）
+4. 服务层（Service）：包含业务逻辑（例如，ItemService.java 和 ItemServiceImpl.java）
+5. 应用配置（Application Properties）：配置设置（application.properties）
+
+##  2. 数据库部分
+
+### 2.1 表初始化
+
+以下是表初始化的代码。
+```
+CREATE TABLE items(
+id BIGINT NOT NULL AUTO_INCREMENT,
+Title VARCHAR(100) NOT NULL,
+Description VARCHAR(2000),
+Quantity BIGINT NOT NULL,
+CONSTRAINT tutorials_PK PRIMARY KEY(id)
+);
+```
+
+
+共有4列：
+
+1. id：物品的唯一标识，是自动递增的。
+2. Title：物品名称。
+3. Description：物品的详细描述。
+4. Quantity：物品的数量。
+
+| id | Title | Description | Quantity |
+| --- | --- | --- | --- |
+| 1 | 例子1 | 这是例1 | 0 |
+| 2 | 例子2 | 非常好吃 | 26 |
+
+<sup>tmi</sup> 我问了GPT是否在完成项目的基本功能后有更多/更好的东西可以添加，但大多数建议对我来说现在没有意义。因此，我没有对功能或列进行更改。
+
+## 3. API 部分
+
+### 3.1 开发环境
+
+- 语言：JAVA 21
+- 框架：Spring Boot 3.3.1
+- 项目构建工具：Gradle - Groovy
+- IDE：IntelliJ IDEA
+- 数据库：MySQL
+- REST API 文档工具：Swagger UI
+- 操作系统：Windows
+
+### 3.2 运行
+
+*从Web URL克隆存储库*
+```
+git clone https://github.com/Project_web_URL
+```
+
+*进入项目目录*
+```
+cd ItemApp
+```
+
+*构建并运行项目*
+
+- *Windows:*
+```
+gradlew.bat build
+gradlew.bat bootRun
+```
+
+
+* *Linux/MacOS:*
+```
+./gradlew build
+./gradlew bootRun
+```
+
+*在Swagger UI上测试*
+```
+localhost:8080/swagger-ui/index.html
+```
+
+## 4. 项目结束☕
+
+1. 理解Spring Boot中各种配置选项和依赖管理需要一定时间。（传说中的注解……）
+2. 建议通过 ***application.properties*** 文件管理环境设置，并使用配置文件来区分开发、测试和生产环境。
+3. 在设计和实现RESTful API的过程中，需要仔细考虑端点设计和HTTP方法的使用。
+4. 异常处理！
+   - 需要适当处理可能发生在所有层次的异常，特别是来自与数据库交互的异常。
+   - 使用Spring的 @ControllerAdvice 和 @ExceptionHandler 实现全局异常处理至关重要。
+
+## 5. 最后的最后
+
+ItemApp 项目是使用Spring Boot和Java的库存管理系统的良好示例。
+
+（从mentor nim、示例代码、谷歌和ChatGPT获得了很多帮助。）
+
+通过这个项目，我学习了诸如**Spring Boot基本结构和CRUD功能实现**、**数据库集成**和**RESTful API设计**等各种技术。根据开发过程中遇到的挑战和注意事项，我希望将能够开发出更加健壮和可扩展的应用程序。
